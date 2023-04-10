@@ -34,11 +34,24 @@ local.properties
 *.keystore
 !debug.keystore
 
+# macOS
+.DS_Store
+
 # node.js
 #
 node_modules/
+.expo/
+dist/
+npm-debug.*
 npm-debug.log
 yarn-error.log
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
 
 # fastlane
 #
