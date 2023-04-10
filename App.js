@@ -1,31 +1,40 @@
-import React from "react";
-import { SafeAreaView, StatusBar, StyleSheet, Text, View } from "react-native";
+import RootTabNavigator from "./navigation/RootTabNavigator";
 
-const App = () => {
-  return (
-    <SafeAreaView>
-      <StatusBar barStyle="dark-content" />
-      <View style={styles.sectionContainer}>
-        <Text style={styles.sectionTitle}>Welcome to Here App</Text>
-      </View>
-    </SafeAreaView>
+export default App = () => {
+  console.log(
+    "////////////////////////////////////////////////////////// \n NEW TEST \n /////////////////////////////////////////////////////////////"
   );
+  return <RootTabNavigator />;
 };
 
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: "600",
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: "400",
-  },
-});
+// import React from "react";
+// import { SafeAreaView, StatusBar, StyleSheet, Text, View } from "react-native";
 
-export default App;
+// const App = () => {
+//   return (
+//     <SafeAreaView>
+//       <StatusBar barStyle="dark-content" />
+//       <View style={styles.sectionContainer}>
+//         <Text style={styles.sectionTitle}>Welcome to Here App</Text>
+//       </View>
+//     </SafeAreaView>
+//   );
+// };
+
+// const styles = StyleSheet.create({
+//   sectionContainer: {
+//     marginTop: 32,
+//     paddingHorizontal: 24,
+//   },
+//   sectionTitle: {
+//     fontSize: 24,
+//     fontWeight: "600",
+//   },
+//   sectionDescription: {
+//     marginTop: 8,
+//     fontSize: 18,
+//     fontWeight: "400",
+//   },
+// });
+
+// export default App;
