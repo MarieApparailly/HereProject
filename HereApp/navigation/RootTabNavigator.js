@@ -3,21 +3,24 @@ import {StatusBar} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import UserStackNavigator from './UserStackNavigator';
+import UsersMapStackNavigator from './UsersMapStackNavigator';
+import UsersListStackNavigator from './UsersListStackNavigator';
+import {setStatusBarBackgroundColor} from 'expo-status-bar';
 
 const Tab = createBottomTabNavigator();
 
 const RootTabNavigator = () => {
   return (
     <NavigationContainer>
-      <StatusBar barStyle="light-content" backgroundColor="#f4511e" />
+      {/* <StatusBar barStyle="light-content" backgroundColor="#f4511e" /> */}
       <Tab.Navigator
         screenOptions={({route}) => ({
           // Icons will be different if the tab is focused
+          // tabBarStyle: {backgroundColor: '#f4511e'},
           tabBarIcon: ({focused, color, size}) => {
             const icons = {
-              UserStack: 'ios-list-outline',
-              UserMapStack: 'ios-map-outline',
+              UsersListStack: 'ios-list-outline',
+              UsersMapStack: 'ios-map',
             };
             return (
               <Ionicons
@@ -31,15 +34,15 @@ const RootTabNavigator = () => {
           headerShown: false,
         })}>
         <Tab.Screen
-          name="UserStack"
-          component={UserStackNavigator}
-          options={{title: 'UserStack'}}
+          name="UsersListStack"
+          component={UsersListStackNavigator}
+          options={{title: 'Status'}}
         />
-        {/* <Tab.Screen
-          name="IngredientStack"
-          component={IngredientStackNavigator}
-          options={{ title: "Ingredients" }}
-        /> */}
+        <Tab.Screen
+          name="UsersMapStack"
+          component={UsersMapStackNavigator}
+          options={{title: 'Position'}}
+        />
       </Tab.Navigator>
     </NavigationContainer>
   );
