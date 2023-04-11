@@ -29,12 +29,23 @@ const UsersMapScreen = ({navigation}) => {
           <Marker
             draggable
             coordinate={{
-              latitude: 44.83476,
-              longitude: -0.573644,
+              latitude: 44.8059307,
+              longitude: -0.5996017,
             }}
             onDragEnd={e => alert(JSON.stringify(e.nativeEvent.coordinate))}
             title={'Vous êtes ici'}
             //description={'This is a description of the marker'}
+          />
+          <Marker
+            pinColor={'#772372'}
+            draggable
+            coordinate={{
+              latitude: 44.83476,
+              longitude: -0.573644,
+            }}
+            onDragEnd={e => alert(JSON.stringify(e.nativeEvent.coordinate))}
+            title={'Marie Apparailly'}
+            description={'0626221915'}
           />
           <Marker
             pinColor={'#242333'}

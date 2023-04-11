@@ -26,6 +26,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import RootTabNavigator from './navigation/RootTabNavigator';
+import Geolocalisation from './components/Geolocalisation';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -65,7 +66,9 @@ function App(): JSX.Element {
   };
 
   return (
+    // <Geolocalisation />
     <RootTabNavigator />
+
     // <SafeAreaView style={backgroundStyle}>
     //   <StatusBar
     //     barStyle={isDarkMode ? 'light-content' : 'dark-content'}
